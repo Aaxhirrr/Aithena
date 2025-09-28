@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const HomeScreen = () => {
@@ -20,8 +19,6 @@ const HomeScreen = () => {
       symbol: '\uD83D\uDCCD',
     },
   ]
-
-  const navigate = useNavigate()
 
   return (
     <div className="min-h-screen p-8 flex flex-col justify-center items-center relative">
@@ -101,13 +98,12 @@ const HomeScreen = () => {
             className="group relative px-12 py-4 bg-white/[0.08] backdrop-blur-3xl rounded-full border border-white/[0.12] text-white/90 font-light tracking-wide hover:bg-white/[0.12] transition-all duration-500"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => navigate('/profile')}
           >
-            <span className="relative z-10">Create Profile</span>
+            <span className="relative z-10">Begin Matching</span>
             <motion.div className="absolute inset-0 rounded-full bg-white/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </motion.button>
           <motion.div className="text-white/30 text-sm font-light tracking-wider" animate={{ opacity: [0.3, 0.6, 0.3] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}>
-            NOTE to judges: Since we do NOT have an actual student database, yet :/... We will be using Gemini as different personas in our groups section, and would be using a json database for the entire application!
+            NOTE to judges: Since we do NOT have an actual student database, yet :/... We will be using Gemini as different personas in our groups section, and would be using a json database for the entire application! Also,
             
             
           </motion.div>
@@ -118,3 +114,4 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen
+
