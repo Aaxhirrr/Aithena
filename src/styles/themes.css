@@ -1,0 +1,4 @@
+/* Theme tokens */
+:root { --brand: #0ea5e9 }
+[data-theme="dark"] { color-scheme: dark }
+
